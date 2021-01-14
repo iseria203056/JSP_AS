@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<taglib version="2.1" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-jsptaglibrary_2_1.xsd">
+    <tlib-version>1.0</tlib-version>
+    <short-name>ict</short-name>
+    <uri>/WEB-INF/tlds/welcomes</uri>
+    <tag>
+        <name>WelcomeTag</name>
+        <tag-class>ict.tag.WelcomeTag</tag-class>
+        <body-content>empty</body-content> 
+        <attribute>
+            <name>users</name>
+            <required>true</required>
+            <type>ict.bean.userBean</type>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute> 
+ 
+    </tag>
+
+</taglib>

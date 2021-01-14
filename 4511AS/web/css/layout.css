@@ -1,0 +1,199 @@
+body {
+
+    margin: 0px;
+    padding:0;
+    font-family: Georgia;
+    line-height: 1.5em;
+}
+
+.left{
+    float: left;
+}
+
+.right{
+    float: right;
+}
+
+.top{
+    float: top;
+}
+
+.bottom{
+    float: bottom;
+}
+
+.fixed {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    z-index:9999;
+}
+
+#flex-container {
+    /* ----- (b) ----- */
+    display: flex;
+    flex-flow: row wrap;
+}
+
+#header, #nav, #main, #aside, #footer {
+    border: 1px solid black;
+    margin: 5px;
+    padding: 15px;
+    box-shadow: 5px 5px 5px #888888;
+}
+
+#header {
+    order: 1;
+    width: 100%;
+
+}
+
+#nav {
+    order: 2;
+    width: 300px;
+    background: white;
+    /* ----- (c) ----- */
+    display: flex;
+    flex-direction: column;
+    font-size: 16px;
+}
+
+.images img{
+    width: 100%;
+    height: 250px;
+    top: 0;
+    left: 0;
+    transition-duration: .5s;
+    transition-property: left;
+    z-index: 1;
+}
+
+.actImages img{
+    width: 400px;
+    height: 250px;
+    top: 0;
+    left: 0;
+    transition-duration: .5s;
+    transition-property: left;
+    z-index: 1;
+}
+
+#main {
+    order: 3;
+    width: 500px;
+    height: auto;
+    font-size: 20px;
+
+    /* ----- (e) ----- */
+
+
+    /* ----- (f) ----- */
+
+
+
+    flex-grow: 3;
+}
+
+#aside {
+    order: 4;
+    width: 300px;
+    background: white;
+    /* ----- (f) ----- */
+    flex-grow: 1;
+    bottom: 0;
+    right: 0;
+}
+
+#footer {
+    order: 5;
+    width: 100%;
+    background: black;
+    color: white;
+}
+
+#header img {
+
+    /* ----- (d) ----- */
+    display: none;
+}
+
+#nav img {
+    display: block;
+    margin-bottom: 15px;
+}
+
+#main h2 {
+    margin: 0px 0px 3px 0px;
+
+    /* ----- (e) ----- */
+    line-height: auto;
+    -webkit-column-span: all;
+}
+
+#aside div {
+    clear: none;
+}
+
+
+
+
+
+form {                                         
+    margin: 0 auto; 
+    width: 600px; 
+}
+/* media query, apply following CSS code only when width is <= 600px */
+
+/* ----- (h) ----- */
+@media only screen and (max-width: 600px ) {
+    #nav {
+        width: 100%;
+
+        /* ----- (h) ----- */
+        order: 1;
+        /*flex-direction: row-reverse;*/
+        justify-content: space-between;
+    }
+
+    #nav img {
+        margin: 0px;
+    }
+
+    .label {
+        /* ----- (h) ----- */
+        display: none;
+    }
+}
+
+/* media query, apply following CSS code only when width is <= 450px */
+
+/* ----- (i) ----- */
+@media only screen and (max-width: 450px) {
+    #header input[type='submit'] {
+
+        /* ----- (i) ----- */
+        display: none;
+    }
+
+    #header img {
+
+        /* ----- (i) ----- */
+        display: inline;
+    }
+
+    #main {
+
+        /* ----- (i) ----- */
+        order: 4;
+    }
+
+    #aside {
+
+        /* ----- (i) ----- */
+        order: 3;
+    }
+
+    #footer {
+        background: #F5F5DC;
+    }
+}
